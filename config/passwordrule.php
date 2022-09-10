@@ -6,7 +6,7 @@ return [
     /**
      * Minimum length of password
      */
-    'min_length'            => 6,
+    'min_length'            => 2,
     /**
      * Password has to contains both lower and upper case characters
      */
