@@ -43,7 +43,7 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        Gate::define('access-admin-routes', static fn (User $user) => $user->isRoleMaster());
+        Gate::define('access-admin-routes', static fn (User $user) => $user->isAdminOrMore());
 
         Gate::resource('exports', ExportPolicy::class, [
             'list'          => 'list',
